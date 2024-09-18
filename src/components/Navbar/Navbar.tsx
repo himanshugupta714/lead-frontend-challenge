@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { getIcons } from "../../assets";
+import { IconsType } from "../../assets/types";
 import "./Navbar.css";
-import downIcon from "../../assets/Down.svg";
-import filterIcon from "../../assets/Tuning.svg";
 import { useState } from "react";
 
 interface NavbarProps {
@@ -37,11 +37,11 @@ const Navbar = ({
         <div>
           <div className="nav-disp-btn" onClick={handleDisplayToggle}>
             <div className="nav-disp-icon nav-disp-filter">
-              <img src={filterIcon} alt="icon" />
+              {getIcons(IconsType.filter)}
             </div>
             <div className="nav-disp-heading">Display</div>
             <div className="nav-disp-icon nav-disp-drop">
-              <img src={downIcon} alt="icon" />
+              {getIcons(IconsType.down)}
             </div>
           </div>
           <div

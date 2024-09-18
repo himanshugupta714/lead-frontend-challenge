@@ -36,7 +36,6 @@
 .card-profile-status {
   height: 12px;
   width: 12px;
-  background-color: var(--grey1);
   border: 1.5px solid var(--white1);
   position: absolute;
   z-index: 0;
@@ -59,6 +58,7 @@
   display: flex;
   align-items: center;
   margin-top: 0.8rem;
+  gap: 10px;
 }
 .card-tag-icon {
   border: 1px solid var(--grey1);
@@ -79,12 +79,7 @@
   border-radius: 0.3rem;
   width: fit-content;
 }
-.card-priority {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--textgrey);
-}
-.card-priority::before {
+.card-tag-box::before {
   display: inline-block;
   content: " ";
   height: 10px;
@@ -92,4 +87,10 @@
   background-color: var(--textgrey);
   border-radius: 50%;
   margin-right: 0.2rem;
+}
+.card-tag-content {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--textgrey);
+  margin-left: 5px;
 }

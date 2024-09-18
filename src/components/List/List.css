@@ -8,21 +8,12 @@
 .list-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   padding: 1.5rem 0rem;
+  justify-content: space-between;
 }
-.list-header-left,
-.list-header-right {
-  display: flex;
-  align-items: center;
-}
-.list-icon {
-  margin-right: 0.5rem;
-  display: flex;
-  align-items: center;
-}
+
 .list-title {
-  margin-right: 0.65rem;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -38,6 +29,12 @@
 }
 .list-card-items {
   width: 100%;
+}
+.list-header-right,
+.list-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 @media (max-width: 500px) and (min-width: 300px) {

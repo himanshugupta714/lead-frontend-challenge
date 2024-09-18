@@ -3,7 +3,7 @@ export interface Ticket {
    title: string;
    priority: number;
    userId: string;
-   user: User | undefined;
+   userObj: User | undefined;
    status: string;
    tag: string[];
 }

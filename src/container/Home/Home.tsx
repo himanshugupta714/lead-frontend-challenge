@@ -1,7 +1,10 @@
 import "./Home.css";
 import { useState, useCallback, useEffect } from "react";
-import { Ticket } from "../../types";
+
 import { useFetchTicketsData } from "../../hooks/useFetchTicketsData";
+
+import { Ticket } from "../../types";
+
 import Navbar from "../../components/Navbar/Navbar";
 import List from "../../components/List";
 
@@ -57,7 +60,6 @@ const App: React.FC = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {(error as Error).message}</div>;
 
-  // Group tickets dynamically based on groupValue
   const groupedTickets = (() => {
     if (groupValue === "status") {
       return ticketDetails.reduce((acc, ticket) => {
@@ -67,7 +69,7 @@ const App: React.FC = () => {
       }, {} as Record<string, Ticket[]>);
     } else if (groupValue === "user") {
       return ticketDetails.reduce((acc, ticket) => {
-        const userName = ticket.user?.name || "Unknown User";
+        const userName = ticket.userObj?.name || "Unknown User";
         acc[userName] = acc[userName] || [];
         acc[userName].push(ticket);
         return acc;
