@@ -33,7 +33,7 @@
 .card-profile-initial {
   text-transform: uppercase;
 }
-.card-profile-initial-available {
+.card-profile-status {
   height: 12px;
   width: 12px;
   background-color: var(--grey1);
@@ -44,8 +44,11 @@
   left: 70%;
   top: 70%;
 }
-.card-profile-initial-available-true {
+.online {
   background-color: rgb(72, 223, 12);
+}
+.offline {
+  background-color: rgb(223, 12, 12);
 }
 .card-title {
   font-size: 1rem;
@@ -76,12 +79,12 @@
   border-radius: 0.3rem;
   width: fit-content;
 }
-.card-tag-title {
+.card-priority {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--textgrey);
 }
-.card-tag-title::before {
+.card-priority::before {
   display: inline-block;
   content: " ";
   height: 10px;

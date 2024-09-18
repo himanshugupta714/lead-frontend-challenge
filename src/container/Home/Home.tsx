@@ -67,7 +67,7 @@ const App: React.FC = () => {
       }, {} as Record<string, Ticket[]>);
     } else if (groupValue === "user") {
       return ticketDetails.reduce((acc, ticket) => {
-        const userName = ticket.userObj?.name || "Unknown User";
+        const userName = ticket.user?.name || "Unknown User";
         acc[userName] = acc[userName] || [];
         acc[userName].push(ticket);
         return acc;
@@ -98,7 +98,6 @@ const App: React.FC = () => {
             Object.keys(groupedTickets).map((groupKey) => (
               <List
                 key={groupKey}
-                groupValue={groupValue}
                 listTitle={groupKey}
                 ticketDetails={groupedTickets[groupKey]}
               />

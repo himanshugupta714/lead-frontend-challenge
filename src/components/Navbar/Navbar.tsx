@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import "./Navbar.css";
 import downIcon from "../../assets/Down.svg";
 import filterIcon from "../../assets/Tuning.svg";
 import { useState } from "react";
