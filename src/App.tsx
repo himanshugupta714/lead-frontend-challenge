@@ -1,11 +1,7 @@
 import Home from "./container/Home";
 
 function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
